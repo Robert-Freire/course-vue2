@@ -1,9 +1,8 @@
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart, IPropertyPaneConfiguration, PropertyPaneTextField } from '@microsoft/sp-webpart-base';
-import { escape } from '@microsoft/sp-lodash-subset';
 
 import * as Vue from 'vue';
-import VueRouter from 'vue-router'
+import VueRouter from 'vue-router';
 
 import MainComponent from './containers/main/main.vue';
 import * as strings from 'toDoStrings';
@@ -22,7 +21,7 @@ export default class TodoWebPart extends BaseClientSideWebPart<ITodoWebPartProps
             message: this.properties.message,
         };
 
-        Vue.use(VueRouter)
+        Vue.use(VueRouter);
         var router = RouterFactory.create();
         new Vue({
             el: `#app-${this.context.instanceId}`,
@@ -32,6 +31,7 @@ export default class TodoWebPart extends BaseClientSideWebPart<ITodoWebPartProps
                     props: this.data,
                 }),
         });
+        router.replace('/');
     }
 
     public onBeforeSerialize(): any {

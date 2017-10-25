@@ -1,7 +1,6 @@
 import * as Vue from 'vue';
-import { Component, Prop } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator';
 import TodoItem from '../todo-item/Todoitem.vue';
-import { ITodoWebPartProps } from '../../ITodoWebPartProps';
 
 @Component({
     components: {
@@ -11,7 +10,7 @@ import { ITodoWebPartProps } from '../../ITodoWebPartProps';
 export default class Todo extends Vue {
     public mytodos: string[] = [];
     public todoTitle: string = '';
-
+    public message: string = 'Tasks';
     public addTodo(): void {
         if (!this.todoTitle) {
             return;

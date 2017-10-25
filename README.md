@@ -1,52 +1,33 @@
-# Todo Client Web Part built with Vue.js and Vue's single-file components
+# eccbc-qa-client
 
-## Summary
+> ECCBC QA Client App
 
-Sample Todo web part demonstrating how you can utilize [Vue](https://vuejs.org/v2) (a progressive framework for building user interfaces) with SharePoint Framework using handy [single-file components](https://vuejs.org/v2/guide/single-file-components.html) approach. 
+## Build Setup
 
-## Used SharePoint Framework Version
-![drop](https://img.shields.io/badge/drop-GA-green.svg)
+``` bash
+#install environment
+install node
+npm install gulp-cli -g
 
-## Applies to
+# install dependencies
+npm install
 
-* [SharePoint Framework Developer Preview](http://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview)
-* [Office 365 developer tenant](http://dev.office.com/sharepoint/docs/spfx/set-up-your-developer-tenant)
+# to enable use of certificate
+gulp trust-dev-cert
 
-## Solution
+# every time that switch the branch
+gulp clean
 
-Solution|Author(s)
---------|---------
-vuejs-todo-single-file-component|Sergei Sergeev ([@sergeev_srg](https://twitter.com/sergeev_srg))
+# serve with hot reload at localhost:8080
+gulp serve
 
-## Version history
+# build for production environment on developmet mode (point to localhost)
+gulp package-solution           => the files are generated in sharepoint, upload the package to point to localhost
+gulp serve --nobrowser          => some changes may not be applied on the fly, rerun after the change to ensure
 
-Version|Date|Comments
--------|----|--------
-0.0.1|January 27, 2017|Initial version.
-0.0.2|March 30, 2017|Updated to GA
-0.0.3|June 14, 2017|Fix webpack 2 issues
+# build for production with minification
+gulp bundle --ship               => the files are generated in temp/deploy
+gulp package-solution --ship     => the files are generated in sharepoint
+upload file service-worker.js to https://equatorialbottling.sharepoint.com/sites/appcatalog/SitePages/Forms/ByAuthor.aspx?InitialTabId=Ribbon%2ERead&VisibilityContext=WSSTabPersistence
 
-## Disclaimer
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
-
----
-
-## Minimal Path to Awesome
-
-- Clone this repo
-- In the command line run:
-  - `npm i`
-  - `gulp serve`
-
-## Features
-
-Demonstrates\uses below features:
-
- - integration between third party frontend framework Vue.js and SharePoint Framework
- - build pipeline customizations
- - modern component-based architecture
- - separation of concerns between markup, styling and code
- - single-file components architecture for Vue.js
- - custom webpack loaders
-
- <img src="https://telemetry.sharepointpnp.com/sp-dev-fx-webparts/samples/vuejs-todo-single-file-component" />
+For detailed explanation on how things work, checkout the [guide] (http://www.qipoint.com/blog/sharepoint-framework-spfx-part-3-deploying-and-shipping-your-client-side-web-part-with-office-365-cdn/)

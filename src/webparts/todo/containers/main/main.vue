@@ -1,16 +1,16 @@
 <template>
     <div>
-        <h1>{{message}}</h1>
-          <ul>
-             <li><router-link to="/">/Tasks</router-link></li>
-             <li><router-link to="/users" exact>/Users</router-link></li>
+      <h1>{{message}}</h1>
+      <ul>
+          <li><router-link to="/">/Tasks</router-link></li>
+          <li><router-link to="/users">/Users</router-link></li>
       </ul>
       <router-view></router-view>
     </div>
 </template>
 
 <script>
-    module.exports = require('./main');
+module.exports = require('./main');
 </script>
 
 <style scoped>
@@ -21,12 +21,12 @@ h1 {
     font-size: 80px;
 }
 
-ul{
+ul {
     list-style: none;
-    display:inline-flex;
+    display: inline-flex;
     padding: 20px;
 }
-li{
+li {
     padding: 20px;
 }
 </style>

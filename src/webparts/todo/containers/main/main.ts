@@ -1,7 +1,6 @@
 import * as Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
 import { ITodoWebPartProps } from '../../ITodoWebPartProps';
-import RouterFactory from '../../router/index';
 
 @Component({
 })

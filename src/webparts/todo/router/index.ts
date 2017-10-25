@@ -5,10 +5,8 @@ import UserComponent from '../components/user/user.vue';
 import { Component } from 'vue-router/types/router';
 
 export default class RouterFactory {
-    public static ROUTE_QA: string = 'QA';
-    public static ROUTE_PERFORMANCE: string = 'Performance';
-    public static ROUTE_EVALUATION: string = 'Evaluation';
-    public static ROUTE_PRODUCT_SELECTION: string = 'Product';
+    public static ROUTE_TASKS: string = '/';
+    public static ROUTE_USERS: string = '/users';
 
     private static router: Router;
     public static create(): Router {
@@ -19,15 +17,16 @@ export default class RouterFactory {
                 mode: 'abstract',
                 routes: [
                     {
-                        path: '/',
-                        name: '/',
+                        path: RouterFactory.ROUTE_TASKS,
+                        name: RouterFactory.ROUTE_TASKS,
                         component: TodoComponent as Component,
                     },
                     {
-                        path: '/users',
-                        name: '/users',
+                        path: RouterFactory.ROUTE_USERS,
+                        name: RouterFactory.ROUTE_USERS,
                         component: UserComponent as Component,
                     },
+                    { path: '*', redirect: RouterFactory.ROUTE_TASKS }
                 ],
             });
         }

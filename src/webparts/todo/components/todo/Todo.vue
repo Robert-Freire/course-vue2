@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h2> Tasks </h2>
-        <!-- <h1>{{message}}</h1> -->
+        <h2> {{ message}} </h2>
         <div id="new-todo">
             <input type="text" @keyup.enter="addTodo" v-model="todoTitle" placeholder="what needs to be done?">
         </div>
