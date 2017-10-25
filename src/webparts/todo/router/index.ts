@@ -1,7 +1,7 @@
 import * as Vue from 'vue';
 import Router from 'vue-router';
 import TodoComponent from '../components/todo/Todo.vue';
-import UserComponent from '../components/user/user.vue';
+import UserComponent from '../components/user/userComponent.vue';
 import { Component } from 'vue-router/types/router';
 
 export default class RouterFactory {
