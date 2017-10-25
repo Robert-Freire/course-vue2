@@ -1,6 +1,6 @@
-# eccbc-qa-client
+# demo course vue 2
 
-> ECCBC QA Client App
+> Demo course Vue 2
 
 ## Build Setup
 
