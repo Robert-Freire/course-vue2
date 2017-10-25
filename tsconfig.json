@@ -1,18 +1,4 @@
 {
-    //     "compilerOptions": {
-    //         "target": "es5",
-    //         "forceConsistentCasingInFileNames": true,
-    //         "module": "commonjs",
-    //         "moduleResolution": "node",
-    //         "jsx": "react",
-    //         "declaration": true,
-    //         "sourceMap": true,
-    //         "experimentalDecorators": true,
-    //         "allowSyntheticDefaultImports": true,
-    //         "types": [
-    //             "webpack-env"
-    //         ]
-    //     }
     "compilerOptions": {
         "target": "es5",
         "lib": [
@@ -33,5 +19,10 @@
             "webpack-env"
         ],
         "skipLibCheck": true
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "typings/index",
+        "typings/index.d.ts"
+    ]
 }

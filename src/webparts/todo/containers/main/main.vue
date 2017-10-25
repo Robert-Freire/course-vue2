@@ -3,7 +3,7 @@
         <h1>{{message}}</h1>
           <ul>
              <li><router-link to="/">/Tasks</router-link></li>
-             <li><router-link to="/users" exact>/Users)</router-link></li>
+             <li><router-link to="/users" exact>/Users</router-link></li>
       </ul>
       <router-view></router-view>
     </div>

@@ -1,11 +1,8 @@
 import * as Vue from 'vue';
 import Router from 'vue-router';
-import  TodoComponent  from '../components/todo/Todo.vue'
+import TodoComponent from '../components/todo/Todo.vue';
+import UserComponent from '../components/user/user.vue';
 import { Component } from 'vue-router/types/router';
-// import QAComponent from '../containers/QA/qa.vue';
-// import PerformanceComponent from '../containers/Performance/performance.vue';
-// import EvaluationComponent from '../containers/Evaluation/evaluation.vue';
-// import ProductSelectionComponent from '../components/product-selection/product-selection.vue';
 
 export default class RouterFactory {
     public static ROUTE_QA: string = 'QA';
@@ -26,9 +23,13 @@ export default class RouterFactory {
                         name: '/',
                         component: TodoComponent as Component,
                     },
+                    {
+                        path: '/users',
+                        name: '/users',
+                        component: UserComponent as Component,
+                    },
                 ],
             });
-
         }
         return this.router;
     }
