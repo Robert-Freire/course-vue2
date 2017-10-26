@@ -31,12 +31,17 @@ h2 {
     text-align: center;
 }
 
-#new-todo input {
+#new-user input {
     padding: 16px 16px 16px 16px;
     border: 1px solid #d6d4d4;
     width: 300px;
 }
 
+#new-user select {
+    padding: 16px 16px 16px 16px;
+    border: 1px solid #d6d4d4;
+    width: 300px;
+}
 ul{
     list-style: none;
 }

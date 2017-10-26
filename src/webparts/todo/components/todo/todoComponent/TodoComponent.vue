@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    module.exports = require('./Todo');
+    module.exports = require('./TodoComponent');
 </script>
 
 <style scoped>

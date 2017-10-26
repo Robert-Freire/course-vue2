@@ -1,8 +1,8 @@
 import * as Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import UserItem from '../user-item/Useritem.vue';
-import { User } from '../../core/model/user';
-import { NationalityDataService } from '../../core/data-service/nationality-data-service';
+import { User } from '../../../core/model/user';
+import { NationalityDataService } from '../../../core/data-service/nationality-data-service';
 
 @Component({
     components: {
